@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="779.0" prefWidth="900.0" style="-fx-background-color: LightGray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.spiceExportCompany.controller.FarmersFormController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);">
+         <children>
+            <Label layoutX="366.0" layoutY="5.0" text="Farmers" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="40.0" layoutY="88.0" prefHeight="327.0" prefWidth="508.0" style="-fx-background-color: white; -fx-border-color: #2BF0C8;">
+         <children>
+            <Label layoutX="14.0" layoutY="35.0" text="Farmer Id">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="274.0" text="Farmer Email">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="206.0" text="Farmer Tell">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="144.0" text="Farmer Address">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="85.0" text="Farmer Name">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtFarmersId" layoutX="204.0" layoutY="35.0" onAction="#txtFarmersIdOnAction" onKeyReleased="#farmerFIdOnKeyReleased" prefHeight="31.0" prefWidth="192.0" />
+            <JFXTextField fx:id="txtFarmersName" layoutX="204.0" layoutY="85.0" onKeyReleased="#farmerNameOnKeyReleased" prefHeight="31.0" prefWidth="192.0" />
+            <JFXTextField fx:id="txtFarmersAddress" layoutX="204.0" layoutY="148.0" onKeyReleased="#farmerAddressOnKeyReleased" prefHeight="31.0" prefWidth="192.0" />
+            <JFXTextField fx:id="txtFarmersTell" layoutX="204.0" layoutY="214.0" onKeyReleased="#farmerTellOnKeyReleased" prefHeight="31.0" prefWidth="192.0" />
+            <JFXTextField fx:id="txtFarmersEmail" layoutX="204.0" layoutY="274.0" onKeyReleased="#farmerEmailOnKeyReleased" prefHeight="31.0" prefWidth="192.0" />
+            <Label fx:id="lblFarmerWarning" layoutX="411.0" layoutY="40.0" />
+            <Label fx:id="lblFarmerWarning1" layoutX="410.0" layoutY="90.0" prefHeight="21.0" prefWidth="3.0" />
+            <Label fx:id="lblFarmerWarning2" layoutX="410.0" layoutY="149.0" />
+            <Label fx:id="lblFarmerWarning3" layoutX="413.0" layoutY="211.0" />
+            <Label fx:id="lblFarmerWarning4" layoutX="410.0" layoutY="274.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblFarmers" layoutX="26.0" layoutY="468.0" prefHeight="233.0" prefWidth="805.0">
+         <columns>
+            <TableColumn fx:id="colFarmersFid" prefWidth="85.0" text="Fid" />
+            <TableColumn fx:id="colFarmersName" prefWidth="149.0" text="Name" />
+            <TableColumn fx:id="colFarmersAddress" minWidth="0.0" prefWidth="167.0" text="Address" />
+            <TableColumn fx:id="colFarmersTell" prefWidth="128.0" text="Tell" />
+            <TableColumn fx:id="colFarmersEmail" minWidth="0.0" prefWidth="275.0" text="Email" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="694.0" layoutY="165.0" onAction="#btnFarmersAddOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #2B87F0;" text="ADD">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="694.0" layoutY="236.0" onAction="#btnFarmersUpdateOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #138F7C;" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="694.0" layoutY="307.0" onAction="#btnFarmersDeleteOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #D91C61;" text="DELETE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtSearchFarmersM" layoutX="628.0" layoutY="96.0" onAction="#txtSearchFarmersM" prefHeight="50.0" prefWidth="234.0" />
+      <AnchorPane layoutX="802.0" layoutY="96.0" prefHeight="50.0" prefWidth="58.0" style="-fx-background-color: gray;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="5.0" onMouseClicked="#btnSearchFarmersM" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/592-5927013_search-button-vector-facebook-icon-png-search-transparent-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="694.0" layoutY="378.0" onAction="#btnFarmersReportOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #32F5AE;" text="REPORT">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

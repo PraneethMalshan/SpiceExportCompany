@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="779.0" prefWidth="1152.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.spiceExportCompany.controller.EmployeesManagementController">
+   <children>
+      <ImageView fitHeight="779.0" fitWidth="1152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/788e7681381729.5cfe547f2afbd.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="pane" layoutX="270.0" prefHeight="779.0" prefWidth="900.0" style="-fx-background-color: white;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="75.0" layoutY="672.0" onAction="#btnBackEmpManageOnAction" prefHeight="60.0" prefWidth="120.0" ripplerFill="#008977" style="-fx-background-color: black;" text="&lt;&lt;Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <VBox prefHeight="638.0" prefWidth="270.0" style="-fx-border-color: black;">
+         <children>
+            <AnchorPane prefHeight="149.0" prefWidth="254.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/lg.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="74.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAMAGI">
+                     <font>
+                        <Font name="Monotype Corsiva" size="30.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="58.0" prefHeight="155.0" prefWidth="145.0" style="-fx-border-color: black; -fx-border-radius: 20;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="23.0" prefWidth="268.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnEmployeesOnAction" prefHeight="80.0" prefWidth="270.0" text="Employees        &gt;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/43-433874_team-transparent-black-and-white-people-icon-png-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="11.0" layoutY="166.0" prefHeight="23.0" prefWidth="268.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnAttendanceOnAction" prefHeight="80.0" prefWidth="270.0" text="Attendance      &gt;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="58.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Detail-Survey-icon-511x511-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="11.0" layoutY="269.0" prefHeight="23.0" prefWidth="268.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnSalaryOnAction" prefHeight="80.0" prefWidth="270.0" text="   Salary           &gt;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/salary-icon-19-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

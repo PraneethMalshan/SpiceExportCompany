@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="779.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.spiceExportCompany.controller.TransportManagmentController">
+   <children>
+      <ImageView fitHeight="779.0" fitWidth="1152.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/788e7681381729.5cfe547f2afbd.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutY="1.0" prefHeight="627.0" prefWidth="260.0" style="-fx-border-color: black;">
+         <children>
+            <AnchorPane prefHeight="155.0" prefWidth="238.0">
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/lg.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="47.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAMAGI">
+                     <font>
+                        <Font name="Monotype Corsiva" size="30.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="28.0" prefHeight="155.0" prefWidth="145.0" style="-fx-border-color: black; -fx-border-radius: 20;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="24.0" prefWidth="254.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnTransportMOnAction" prefHeight="92.0" prefWidth="289.0" text="Transport       &gt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#21bf63" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <AnchorPane layoutX="11.0" layoutY="166.0" prefHeight="24.0" prefWidth="254.0" />
+            <JFXButton buttonType="RAISED" layoutX="11.0" layoutY="190.0" onAction="#btnVehicleMOnAction" prefHeight="92.0" prefWidth="228.0" text="Vehicle           &gt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#21bf63" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <AnchorPane layoutX="11.0" layoutY="282.0" prefHeight="24.0" prefWidth="254.0" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="pane1" layoutX="260.0" prefHeight="779.0" prefWidth="900.0" style="-fx-background-color: LightGray;" />
+      <JFXButton buttonType="RAISED" layoutX="66.0" layoutY="668.0" onAction="#btnBackTrensportManagementOnAction" prefHeight="60.0" prefWidth="120.0" ripplerFill="#008977" style="-fx-background-color: black;" text="&lt;&lt;Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

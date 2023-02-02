@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" onDragDetected="#btnAttendanceOnAction" onMouseClicked="#btnSearchAttendanceMousapointOnAction" prefHeight="779.0" prefWidth="900.0" style="-fx-background-color: LightGray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.spiceExportCompany.controller.AttendanceFormController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);">
+         <children>
+            <Label layoutX="328.0" layoutY="5.0" text="Attendance" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="94.0" prefHeight="345.0" prefWidth="452.0" style="-fx-background-color: white; -fx-border-color: #2BF0C8;">
+         <children>
+            <Label layoutX="40.0" layoutY="34.0" text="Employee Id">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="180.0" text="In Time">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="combAttenEmployeeeId" layoutX="208.0" layoutY="34.0" prefHeight="31.0" prefWidth="196.0" />
+            <JFXTimePicker fx:id="txtAttendanceInTime" layoutX="208.0" layoutY="179.0" prefHeight="31.0" prefWidth="210.0" />
+            <Label layoutX="40.0" layoutY="249.0" text="Out Time">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTimePicker fx:id="txtAttendanceOutTime" layoutX="208.0" layoutY="249.0" prefHeight="31.0" prefWidth="210.0" />
+            <Label layoutX="40.0" layoutY="105.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="txtAttendanceDate" layoutX="199.0" layoutY="105.0" prefHeight="31.0" prefWidth="210.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblAttendance" layoutX="23.0" layoutY="482.0" prefHeight="248.0" prefWidth="686.0">
+         <columns>
+            <TableColumn fx:id="colAttendancEId" prefWidth="185.0" text="EmployeeId" />
+            <TableColumn fx:id="colAttendanceDate" prefWidth="154.0" text="Date" />
+            <TableColumn fx:id="colAttendanceInTime" minWidth="0.0" prefWidth="162.0" text="InTime" />
+            <TableColumn fx:id="colAttendanceOutTime" minWidth="0.0" prefWidth="182.0" text="OutTime" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="647.0" layoutY="132.0" onAction="#btnAddAttendanceOnAction" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: #2B87F0;" text="ADD">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="647.0" layoutY="302.0" onAction="#btnDeleteAttendanceOnAction" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: #D91C61;" text="DELETE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

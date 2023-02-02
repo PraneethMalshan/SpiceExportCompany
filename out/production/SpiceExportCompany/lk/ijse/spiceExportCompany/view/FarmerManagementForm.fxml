@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="779.0" prefWidth="1152.0" style="-fx-background-color: #D9D9D9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.spiceExportCompany.controller.FarmerManagementFormController">
+   <children>
+      <ImageView fitHeight="779.0" fitWidth="1152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/788e7681381729.5cfe547f2afbd.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="4.0" prefHeight="670.0" prefWidth="266.0" style="-fx-border-color: black;">
+         <children>
+            <AnchorPane prefHeight="149.0" prefWidth="254.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/lg.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="82.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAMAGI">
+                     <font>
+                        <Font name="Monotype Corsiva" size="30.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="63.0" layoutY="-2.0" prefHeight="155.0" prefWidth="145.0" style="-fx-border-color: black; -fx-border-radius: 20;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="24.0" prefWidth="271.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnFarmersOnAction" prefHeight="80.0" prefWidth="276.0" text="     Farmers           &gt;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/43-433874_team-transparent-black-and-white-people-icon-png-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="11.0" layoutY="268.0" prefHeight="24.0" prefWidth="271.0" />
+            <JFXButton buttonType="RAISED" onAction="#btnFarmerPaymentOnAction" prefHeight="80.0" prefWidth="285.0" text="Farmer Payments     &gt;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/salary-icon-19-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="11.0" layoutY="372.0" prefHeight="24.0" prefWidth="271.0" />
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="685.0" onAction="#btnFarmerManagementBackOnAction" prefHeight="60.0" prefWidth="120.0" ripplerFill="#008977" style="-fx-background-color: black;" text="&lt;&lt;Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="pane1" layoutX="270.0" prefHeight="779.0" prefWidth="900.0" style="-fx-background-color: LightGray;" />
+   </children>
+</AnchorPane>

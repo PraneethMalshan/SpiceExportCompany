@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="779.0" prefWidth="900.0" style="-fx-background-color: LightGray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.spiceExportCompany.controller.FarmerPaymerntsFormController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);">
+         <children>
+            <Label layoutX="266.0" layoutY="5.0" text="Farmer Payments" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="21.0" layoutY="85.0" prefHeight="331.0" prefWidth="636.0" style="-fx-background-color: white; -fx-border-color: #2BF0C8;">
+         <children>
+            <Label layoutX="24.0" layoutY="104.0" text="Farmer Payment id">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="237.0" text="Balance">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="167.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFarmerPaymentId" layoutX="239.0" layoutY="103.0" onAction="#txtFarmerPaymentIdOnAction" prefHeight="31.0" prefWidth="249.0" promptText="Farmer Payment id*" />
+            <TextField fx:id="txtFarmerPaymentBalance" layoutX="239.0" layoutY="236.0" prefHeight="31.0" prefWidth="249.0" promptText="Balance*" />
+            <Label layoutX="22.0" layoutY="50.0" text="Farmer Id">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbFarmerPamentsId" layoutX="239.0" layoutY="49.0" prefHeight="31.0" prefWidth="249.0" promptText="Farmer Id*" />
+            <JFXDatePicker fx:id="txtFarmerPaymentDate" layoutX="239.0" layoutY="166.0" prefHeight="31.0" prefWidth="249.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblFarmerPayments" layoutX="21.0" layoutY="457.0" prefHeight="261.0" prefWidth="838.0">
+         <columns>
+            <TableColumn fx:id="colFarmerPaymentFid" prefWidth="136.0" text="Fid" />
+            <TableColumn fx:id="colToFarmerPaymentid" prefWidth="254.0" text="To Farmer Payment id" />
+            <TableColumn fx:id="colFarmentPaymentsDate" prefWidth="215.0" text="Date" />
+            <TableColumn fx:id="colFarmerPaymentBalance" minWidth="0.0" prefWidth="161.0" text="Balance" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="694.0" layoutY="133.0" onAction="#btnFarmerPaymentsAdd" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #2B87F0;" text="ADD">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="694.0" layoutY="251.0" onAction="#btnFarmerPaymentsUpdate" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #138F7C;" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="694.0" layoutY="366.0" onAction="#btnFarmerPaymentsDeleete" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #D91C61;" text="DELETE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
